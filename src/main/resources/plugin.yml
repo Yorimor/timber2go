@@ -1,0 +1,6 @@
+name: timber2go
+version: 0.1
+author: rex2go
+
+main: eu.rex2go.timber2go.Timber2Go
+api-version: 1.13
