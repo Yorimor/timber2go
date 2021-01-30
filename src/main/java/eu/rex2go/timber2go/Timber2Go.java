@@ -70,6 +70,8 @@ public class Timber2Go extends JavaPlugin implements Listener {
     private final Material[] ground = new Material[]{
             Material.DIRT,
             Material.GRASS_BLOCK,
+            Material.COARSE_DIRT,
+            Material.PODZOL,
 
             Material.CRIMSON_NYLIUM,
             Material.WARPED_NYLIUM,
