@@ -159,10 +159,10 @@ public class Timber2Go extends JavaPlugin implements Listener {
         public void run() {
             Location activeLocation = activeBlock.getLocation();
 
-            if (activeLocation.getBlockX() - baseLocation.getBlockX() >= 5
-                    || activeLocation.getBlockX() - baseLocation.getBlockX() <= -5) return;
-            if (activeLocation.getBlockZ() - baseLocation.getBlockZ() >= 5
-                    || activeLocation.getBlockZ() - baseLocation.getBlockZ() <= -5) return;
+            if (activeLocation.getBlockX() - baseLocation.getBlockX() >= 7
+                    || activeLocation.getBlockX() - baseLocation.getBlockX() <= -7) return;
+            if (activeLocation.getBlockZ() - baseLocation.getBlockZ() >= 7
+                    || activeLocation.getBlockZ() - baseLocation.getBlockZ() <= -7) return;
 
             UUID uuid = player.getUniqueId();
             ItemStack itemStack = player.getInventory().getItemInMainHand();
