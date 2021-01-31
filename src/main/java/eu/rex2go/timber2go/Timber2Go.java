@@ -88,6 +88,8 @@ public class Timber2Go extends JavaPlugin implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onBlockBreak(BlockBreakEvent event) {
+        if(event.isCancelled()) return;
+
         Player player = event.getPlayer();
         ItemStack itemStack = player.getInventory().getItemInMainHand();
         Block block = event.getBlock();
