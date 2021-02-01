@@ -86,7 +86,7 @@ public class Timber2Go extends JavaPlugin implements Listener {
         checkedLocations.remove(player.getUniqueId());
     }
 
-    @EventHandler(priority = EventPriority.HIGHEST)
+    @EventHandler(priority = EventPriority.MONITOR)
     public void onBlockBreak(BlockBreakEvent event) {
         if(event.isCancelled()) return;
 
