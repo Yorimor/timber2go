@@ -1,7 +1,7 @@
 name: timber2go
-version: 1.2.1
-author: rex2go
-description: A simple tree chopping plugin
+version: 1.3
+author: rex2go & yorimor
+description: A simple tree chopping plugin. Created by rex2go, 1.18 blocks added by Yorimor
 
 main: eu.rex2go.timber2go.Timber2Go
-api-version: 1.13
+api-version: 1.18

@@ -1,6 +1,5 @@
 package eu.rex2go.timber2go;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -14,11 +13,10 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.Damageable;
-import org.bukkit.inventory.meta.ItemMeta;
+//import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import javax.swing.text.Highlighter;
 import java.util.*;
 
 public class Timber2Go extends JavaPlugin implements Listener {
@@ -65,6 +63,9 @@ public class Timber2Go extends JavaPlugin implements Listener {
             Material.SPRUCE_LEAVES,
             Material.OAK_LEAVES,
 
+            Material.AZALEA_LEAVES,
+            Material.FLOWERING_AZALEA_LEAVES,
+
             Material.WARPED_WART_BLOCK,
             Material.NETHER_WART_BLOCK
     };
@@ -74,6 +75,9 @@ public class Timber2Go extends JavaPlugin implements Listener {
             Material.GRASS_BLOCK,
             Material.COARSE_DIRT,
             Material.PODZOL,
+
+            Material.MOSS_BLOCK,
+            Material.ROOTED_DIRT,
 
             Material.CRIMSON_NYLIUM,
             Material.WARPED_NYLIUM,
@@ -176,7 +180,7 @@ public class Timber2Go extends JavaPlugin implements Listener {
                 Damageable damageable = (Damageable) itemStack.getItemMeta();
                 assert damageable != null;
                 damageable.setDamage(damageable.getDamage() + 1);
-                itemStack.setItemMeta((ItemMeta) damageable);
+                itemStack.setItemMeta(damageable);
 
                 if (damageable.getDamage() > itemStack.getType().getMaxDurability()) {
                     player.getInventory().setItemInMainHand(new ItemStack(Material.AIR));
